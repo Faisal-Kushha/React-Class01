@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 class HornedBeasts extends React.Component {
 
@@ -27,7 +27,7 @@ class HornedBeasts extends React.Component {
             <Card.Text>
               Votes ❤️: {this.state.Votes}
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <p>{this.props.description}</p>
           </Card.Body>
         </Card>
       </>
