@@ -1,11 +1,35 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 class HornedBeasts extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      Votes : 0
+    };
+  }
+
+  incrementNumber = () => {
+    this.setState({
+      Votes : this.state.Votes + 1
+    });
+  }
   render() {
     return (
       <>
-        <div>{this.props.className}</div>
-        <div>{this.props.className}</div>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={this.props.imgUrl} onClick={this.incrementNumber} />
+          <Card.Body>
+            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Text>
+              Votes ❤️: {this.state.Votes}
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
       </>
     );
   }
