@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-// import Button from 'react-bootstrap/Button';
 
 class HornedBeasts extends React.Component {
   constructor(props) {
@@ -36,8 +35,6 @@ class HornedBeasts extends React.Component {
                 {this.props.description}
                 Votes ❤️: {this.state.Votes}
               </Card.Text>
-
-              {/* <Button variant="primary">Go somewhere</Button> */}
             </Card.Body>
           </Card>
         </Col>
